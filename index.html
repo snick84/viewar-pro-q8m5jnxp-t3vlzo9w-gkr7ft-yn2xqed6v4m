@@ -18,6 +18,7 @@
         
 
 <!-- Load model-viewer modules and disable viewer border -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
 
 <!-- Load focus-visible module for improved focus visibility -->
@@ -25,6 +26,16 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
+<style>
+  body, html {
+    margin: 0; padding: 0; width: 100%; height: 100%;
+    font-family: 'Proxima Nova', -apple-system, sans-serif;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after { box-sizing: inherit; }
+</style>
 
 </head>
   
@@ -1656,6 +1667,13 @@ document.addEventListener('click', function(event) {
     transform: translateX(-50%);
     z-index: 2;
     width: 180px; /* Adjust as needed */
+  }
+
+		/* ADD THIS NEW RULE RIGHT BELOW IT */
+  #ar-button img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
 
